@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* layout start */
+  .container {
+    @apply ml-auto mr-auto max-w-screen-2xl px-4 md:px-8 lg:px-20;
+  }
+  /* layout end */
+  /* typography start */
+  .text-h1 {
+    @apply text-6xl md:text-7xl lg:text-9xl/[0.8] font-bold uppercase
+  }
+  .text-title {
+    @apply text-xl md:text-2xl lg:text-3xl font-medium;
+  }
+  .text-body-1 {
+    @apply text-base md:text-lg lg:text-xl;
+  }
+  .text-body-2 {
+    @apply text-xs md:text-sm lg:text-base;
+  }
+  .text-body-2 {
+    @apply text-xs md:text-sm lg:text-base;
+  }
+  .text-button {
+    @apply text-xs md:text-sm lg:text-base;
+  }
+  /* typography end */
+  /* buttons start */
+  .btn {
+    @apply relative overflow-hidden text-button inline-flex justify-center items-center h-9 px-3 rounded-lg md:h-11
+  }
+  .btn-primary {
+    @apply btn bg-gradient-primary text-white shadow-btn-primary origin-bottom-right active:scale-95 active:shadow-btn-primary-active hover:hue-rotate-15 transition duration-500
+  }
+  /* buttons end */
+}
