@@ -1,9 +1,14 @@
+'use client';
+
 import React, { useRef, useLayoutEffect } from 'react';
+
+import { isTouchEnabled } from '@utils/isTouchEnabled';
 
 const CursorFollower = () => {
   const followerRef = useRef<HTMLDivElement>(null);
   const mousePos = useRef({ x: 0, y: 0 });
   const delayFactor = 8;
+  const isTouchScreenDevice = isTouchEnabled();
 
   useLayoutEffect(() => {
     const handleMouseMove = (e: any) => {
@@ -35,6 +40,9 @@ const CursorFollower = () => {
     requestAnimationFrame(animateFollower);
   }, []);
 
+  if (isTouchScreenDevice) {
+    return null;
+  }
   return (
     <div
       ref={followerRef}

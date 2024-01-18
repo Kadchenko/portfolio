@@ -1,16 +1,10 @@
-'use client';
-
 import { Header, Footer } from '@components/layout';
 import CursorFollower from '@components/CursorFollower';
 
-import { isTouchEnabled } from '../utils';
-
 export default function Home() {
-  const isTouchScreenDevice = isTouchEnabled();
-
   return (
     <>
-      {!isTouchScreenDevice && <CursorFollower />}
+      <CursorFollower />
       <Header />
       <div className="container relative flex flex-col items-center justify-between gap-10 py-10 text-center md:flex-row md:text-left md:max-lg:gap-5 landscape:flex-row landscape:text-left">
         <div className="order-1 md:order-none landscape:order-none">
