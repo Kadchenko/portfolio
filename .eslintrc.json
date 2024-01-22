@@ -37,6 +37,10 @@
           {
             "pattern": "@assets/**",
             "group": "internal"
+          },
+          {
+            "pattern": "@vercel/**",
+            "group": "external"
           }
         ],
         "pathGroupsExcludedImportTypes": ["internal"],

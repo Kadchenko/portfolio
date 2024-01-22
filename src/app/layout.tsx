@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+
 import '@styles/globals.css';
 
 import type { Metadata } from 'next';
@@ -21,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="text-body-1 grid min-h-dvh grid-rows-main-layout font-Roboto text-black transition-all duration-500 dark:bg-black dark:text-white">
         {children}
+        <Analytics />
       </body>
     </html>
   );
